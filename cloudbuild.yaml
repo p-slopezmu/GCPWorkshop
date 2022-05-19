@@ -2,14 +2,14 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/github.com/p-slopezmu/cloud_run_image_slopez:$COMMIT_SHA', '.' ]
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/github.com/slopezmu/cloud_run_image_slopez:$COMMIT_SHA']
+  args: ['push', 'gcr.io/$PROJECT_ID/github.com/p-slopezmu/cloud_run_image_slopez:$COMMIT_SHA']
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
     - 'run'
     - 'deploy'
     - 'cloudrunservice-build-slopezmu'
     - '--image'
-    - 'gcr.io/$PROJECT_ID/github.com/slopezmu/cloud_run_image_slopez:$COMMIT_SHA'
+    - 'gcr.io/$PROJECT_ID/github.com/p-slopezmu/cloud_run_image_slopez:$COMMIT_SHA'
     - '--region'
     - 'us-east4'
     - '--platform'
