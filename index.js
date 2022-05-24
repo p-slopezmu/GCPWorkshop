@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 	console.log('Conexion a mysql');
    createTcpPool ();	
    console.log('Conexion establecida');
-  res.send('Hello World!')
+  res.send('Hello World! SLopez')
 })
 
 app.listen(port, () => {
